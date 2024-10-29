@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento de Projeto de Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        .item {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .item:last-child {
+            border-bottom: none;
+        }
+        .price {
+            font-weight: bold;
+        }
+        .total, .discount {
+            text-align: right;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .final-price {
+            text-align: right;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #27ae60;
+        }
+        .icons {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            mask-size: contain;
+            mask-repeat: no-repeat;
+        }
+        .icon-pages { mask-image: url('https://img.icons8.com/ios-filled/50/000000/document.png'); }
+        .icon-backend { mask-image: url('https://img.icons8.com/ios-filled/50/000000/data-configuration.png'); }
+        .icon-database { mask-image: url('https://img.icons8.com/ios-filled/50/000000/database.png'); }
+        .icon-auth { mask-image: url('https://img.icons8.com/ios-filled/50/000000/password1.png'); }
+        .icon-hosting { mask-image: url('https://img.icons8.com/ios-filled/50/000000/cloud-server.png'); }
+        .icon-security { mask-image: url('https://img.icons8.com/ios-filled/50/000000/shield.png'); }
+        .icon-maintenance { mask-image: url('https://img.icons8.com/ios-filled/50/000000/support.png'); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Orçamento de Projeto de Site</h1>
+        <h2>Detalhes do Cálculo</h2>
+
+        <div class="icons">
+            <div class="icon icon-pages"></div>
+            <div class="icon icon-backend"></div>
+            <div class="icon icon-database"></div>
+            <div class="icon icon-auth"></div>
+            <div class="icon icon-hosting"></div>
+            <div class="icon icon-security"></div>
+            <div class="icon icon-maintenance"></div>
+        </div>
+
+        <div class="item">
+            <span>15 Páginas (R$17 por página)</span>
+            <span class="price">R$255</span>
+        </div>
+        <div class="item">
+            <span>Back-End + Front-End</span>
+            <span class="price">R$180</span>
+        </div>
+        <div class="item">
+            <span>Banco de Dados em Tempo Real (por mês)</span>
+            <span class="price">R$40</span>
+        </div>
+        <div class="item">
+            <span>Sistema de Autenticação (R$80 inicial + R$7/mês)</span>
+            <span class="price">R$80</span>
+        </div>
+        <div class="item">
+            <span>Hospedagem (Gratuita, mas cobra se houver alto tráfego)</span>
+            <span class="price">R$0</span>
+        </div>
+        <div class="item">
+            <span>Servidores (R$20 por mês)</span>
+            <span class="price">R$20</span>
+        </div>
+        <div class="item">
+            <span>Equipe de Manutenção (R$30 por mês)</span>
+            <span class="price">R$30</span>
+        </div>
+        <div class="item">
+            <span>Segurança Hexa03+</span>
+            <span class="price">R$60</span>
+        </div>
+        <div class="item">
+            <span>Atualizações (R$16 por atualização)</span>
+            <span class="price">R$16</span>
+        </div>
+        <div class="item">
+            <span>Hospedagem de Imagens e Arquivos (R$70 inicial + R$4/mês)</span>
+            <span class="price">R$70</span>
+        </div>
+        <div class="item">
+            <span>Proteção Contra Ataques</span>
+            <span class="price">R$50</span>
+        </div>
+
+        <div class="total">
+            <span>Total Sem Desconto:</span>
+            <span id="totalPrice">R$801</span>
+        </div>
+
+        <div class="discount">
+            <span>Desconto de R$100:</span>
+            <span>-R$100</span>
+        </div>
+
+        <div class="final-price">
+            <span>Total Final:</span>
+            <span id="finalPrice">R$701</span>
+        </div>
+    </div>
+
+    <script>
+        // Cálculo total sem desconto
+        let total = 255 + 180 + 40 + 80 + 0 + 20 + 30 + 60 + 16 + 70 + 50;
+
+        // Aplicar desconto de R$100
+        let totalComDesconto = total - 100;
+
+        // Exibir os valores calculados
+        document.getElementById('totalPrice').innerText = 'R$' + total;
+        document.getElementById('finalPrice').innerText = 'R$' + totalComDesconto;
+    </script>
+
+</body>
+  </html>
